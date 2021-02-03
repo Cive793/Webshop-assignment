@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    line-height: 160px
+    line-height: 160px;
 }
 
 h1 {
@@ -38,11 +38,36 @@ header a {
 }
 
 
+h2 {margin-left: 30px;
+    margin-top: 0px;
+    font-size: 70px;
+    margin-bottom: 0px
+}
+
+section ul {
+    margin-top: 30px;
+    margin-bottom: 80px
+}
+
+section li {
+    list-style-type: none;
+}
+
+section a {
+    text-decoration: none;
+    color: #6d5985;
+    font-size: 40px;
+    margin-right: 60px
+}
+
+section {padding-bottom: 20px}
+
+
 
 
 /*Media queries*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
 
     header {line-height: 0px}
 
@@ -52,6 +77,14 @@ header a {
 
     header ul {margin-left: 30px; margin-top: 30px}
 
-    h1 {margin-left: 0px; margin-top: 60px}
+    h1 {margin-left: 0px; margin-top: 60px; font-size: 80px}
+
+    h2 {margin-top: 60px}
+
+    section ul {margin-top: 10px}
+
+    section a {display: block; margin-bottom: 10px}
+
+    section {padding-bottom: 0px}
 
 }
