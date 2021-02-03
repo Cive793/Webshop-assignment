@@ -42,13 +42,16 @@ header a {
 
 /*Media queries*/
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
 
-    header ul {margin-top: 20px;
-    float: left; }
+    header {line-height: 0px}
 
-    h1 {margin-bottom: 0px}
+    header {display: flex; flex-direction: column; align-items: center}
 
     header a {margin-right: 10px}
+
+    header ul {margin-left: 30px; margin-top: 30px}
+
+    h1 {margin-left: 0px; margin-top: 60px}
 
 }
