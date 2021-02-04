@@ -92,6 +92,24 @@ p {
 }
 
 
+.price {
+    font-weight: 600;
+}
+
+footer a {
+    text-decoration: none;
+    color: #6d5985;
+    margin-left: 10px
+}
+
+footer {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px
+}
+
 
 /*Media queries*/
 
@@ -108,5 +126,7 @@ p {
     h1 {margin-left: 0px; margin-top: 60px; font-size: 80px}
 
     h2 {margin-top: 40px; font-size: 50px}
+
+    footer {font-size: 20px}
 
 }
