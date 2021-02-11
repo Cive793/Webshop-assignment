@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="productlist.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="productlist.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1>all<span>Wear</span></h1>
+      <h1>all<span>Wear</span></h1>
 
-    <ul>
+      <ul>
         <li><a href="category.html">Brands</a></li>
         <li><a href="category.html">Categories</a></li>
         <li><a href="category.html">Seasons</a></li>
-    </ul>
-
+      </ul>
     </header>
 
     <main>
-        <h2>Nike</h2>
+      <h2>Puma</h2>
 
-        <section id="product-list">
+      <section id="product-list">
+        <template id="productTemplate">
+          <article class="product">
+            <a href="product.html">
+              <img src="assets/1526.webp" />
+            </a>
 
-            <article class="product">
-                <a href="product.html">
-                    <img src="assets/1526.webp">
-                </a>
+            <h3>Big Cat Backpack Black</h3>
+            <p>Backpacks I Unisex</p>
+            <p class="price">DKK 1299</p>
+          </article>
+        </template>
 
-                <h3>Big Cat Backpack Black</h3>
-                <p>Backpacks I Unisex</p>
-                <p class="price">DKK 1299</p>
-            </article>
+        <!-- <article class="product">
+          <a href="product.html">
+            <img src="assets/1531.webp" />
+          </a>
 
-            <article class="product">
-                <a href="product.html">
-                   <img src="assets/1531.webp">
-                </a>
+          <h3>Grey Solid Round Neck T-Shirt</h3>
+          <p>Tshirts I Men</p>
+          <p class="price">DKK 799</p>
+        </article>
 
-                <h3>Grey Solid Round Neck T-Shirt</h3>
-                <p>Tshirts I Men</p>
-                <p class="price">DKK 799</p>
-            </article>
+        <article class="product-discount">
+          <a href="product.html">
+            <img src="assets/1165.webp" />
+          </a>
 
-            <article class="product-discount">
-                <a href="product.html">
-                   <img src="assets/1165.webp">
-                </a>
+          <h3>Mean Team India Cricket Jersey</h3>
+          <p>Tshirts I Men</p>
+          <p class="price">Prev: 2495 DKK</p>
+          <p class="discount">Now: 1250 DKK</p>
+        </article>
 
-                <h3>Mean Team India Cricket Jersey</h3>
-                <p>Tshirts I Men</p>
-                <p class="price">Prev: 2495 DKK</p>
-                <p class="discount">Now: 1250 DKK</p>
-            </article>
+        <article class="product-soldout-discount">
+          <a href="product.html">
+            <div class="container">
+              <p class="sold-out">Sold out</p>
+            </div>
+            <img class="soldout-img" src="assets/1530.webp" />
+          </a>
 
-            <article class="product-soldout-discount">
-                <a href="product.html">
-                   <div class="container">
-                       <p class="sold-out">Sold out</p>
-                   </div>
-                   <img class="soldout-img" src="assets/1530.webp">
-                </a>
+          <h3>Track Jacket</h3>
+          <p>Jackets I Men</p>
+          <p class="price">Prev: 4299 DKK</p>
+          <p class="discount">Now: 4242 DKK</p>
+        </article>
 
-                <h3>Track Jacket</h3>
-                <p>Jackets I Men</p>
-                <p class="price">Prev: 4299 DKK</p>
-                <p class="discount">Now: 4242 DKK</p>
-            </article>
+        <article class="product-discount">
+          <a href="product.html">
+            <img src="assets/1573.webp" />
+          </a>
 
-            <article class="product-discount">
-                <a href="product.html">
-                   <img src="assets/1573.webp">
-                </a>
+          <h3>omen Athletes Grey Track Pants</h3>
+          <p>Track pants I Women</p>
+          <p class="price">Prev: 999 DKK</p>
+          <p class="discount">Now: 934 DKK</p>
+        </article>
 
-                <h3>omen Athletes Grey Track Pants</h3>
-                <p>Track pants I Women</p>
-                <p class="price">Prev: 999 DKK</p>
-                <p class="discount">Now: 934 DKK</p>
-            </article>
+        <article class="product-discount">
+          <a href="product.html">
+            <img src="assets/1561.webp" />
+          </a>
 
-            <article class="product-discount">
-                <a href="product.html">
-                   <img src="assets/1561.webp">
-                </a>
-
-                <h3>omen Sweat Proof hite T-shirt</h3>
-                <p>Tshirts I Women</p>
-                <p class="price">Prev: 499 DKK</p>
-                <p class="discount">Now: 470 DKK</p>
-            </article>
-
-        </section>
+          <h3>omen Sweat Proof hite T-shirt</h3>
+          <p>Tshirts I Women</p>
+          <p class="price">Prev: 499 DKK</p>
+          <p class="discount">Now: 470 DKK</p>
+        </article> -->
+      </section>
     </main>
 
     <footer>
-        Product images on this site are from
+      Product images on this site are from
 
-        <a href="https://www.kaggle.com/paramaggarwal/fashion-product-images-dataset">here</a>
-
+      <a
+        href="https://www.kaggle.com/paramaggarwal/fashion-product-images-dataset"
+        >here</a
+      >
     </footer>
-
-</body>
+    <script src="productlist.js"></script>
+  </body>
 </html>
