@@ -39,6 +39,15 @@ function showProduct(product) {
   ).textContent = `${product.articletype} | ${product.gender}`;
 
   copy.querySelector("h3").textContent = product.productdisplayname;
+
+  if (product.soldout) {
+    document.querySelector(".sold-out").remove();
+  }
+
+  if (product.discount) {
+    copy.querySelector("article").classList.add("on-sale");
+  }
+
   //grab parent
   const parent = document.querySelector("section");
   //append
