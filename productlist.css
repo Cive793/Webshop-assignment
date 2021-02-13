@@ -70,16 +70,20 @@ p {
   margin-bottom: 5px;
 }
 
-/* .discount,
 .price span {
-  display: none;
-} */
+  color: black;
+}
 
 .discount {
   color: red;
   font-weight: 600;
   margin-top: 0px;
   display: none;
+}
+
+.discount p,
+.discount span {
+  color: red;
 }
 
 article.on-sale .discount {

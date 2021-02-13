@@ -40,12 +40,16 @@ function showProduct(product) {
 
   copy.querySelector("h3").textContent = product.productdisplayname;
 
-  if (product.soldout) {
-    document.querySelector(".sold-out").remove();
+  if (product.soldout == false) {
+    copy.querySelector(".sold-out").remove();
   }
 
   if (product.discount) {
     copy.querySelector("article").classList.add("on-sale");
+  }
+
+  if (product.soldout) {
+    copy.querySelector("img").classList.add("soldout-img");
   }
 
   //grab parent
