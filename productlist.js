@@ -58,6 +58,8 @@ function showProduct(product) {
     Math.round(+product.price * (1 - product.discount / 100)) +
     " DKK";
 
+  copy.querySelector("a").href = `product.html?id=${product.id}`;
+
   if (product.soldout == false) {
     copy.querySelector(".sold-out").remove();
   }
