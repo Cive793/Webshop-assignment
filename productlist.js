@@ -1,5 +1,9 @@
 const url = "https://kea-alt-del.dk/t7/api/products";
 
+/* var discountTotal = "product.price" * (1 - "product.discount / 100)";
+
+var discountTotal = Math.round(2.5); */
+
 fetch(url)
   .then(function (res) {
     return res.json();
@@ -50,7 +54,9 @@ function showProduct(product) {
 
   copy.querySelector(".price").textContent = product.price + " DKK";
   copy.querySelector(".discount p").textContent =
-    "Now: " + product.price * (1 - product.discount / 100) + " DKK";
+    "Now: " +
+    Math.round(+product.price * (1 - product.discount / 100)) +
+    " DKK";
 
   if (product.soldout == false) {
     copy.querySelector(".sold-out").remove();
