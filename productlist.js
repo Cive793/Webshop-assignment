@@ -15,16 +15,20 @@ function handleProductList(data) {
 
 {
   /* <template id="productTemplate">
-  <article class="product">
-    <a href="product.html">
-      <img src="assets/1526.webp" />
-    </a>
+          <article class="product">
+            <a href="product.html">
+              <p class="sold-out">Sold out</p>
+              <img src="assets/1526.webp" />
+            </a>
 
-    <h3>Big Cat Backpack Black</h3>
-    <p class="subtitle">Backpacks I Unisex</p>
-    <p class="price">DKK 1299</p>
-  </article>
-</template> */
+            <h3>Big Cat Backpack Black</h3>
+            <p class="subtitle">Backpacks | Unisex</p>
+            <p class="price"><span>Prev:</span> 1299 DKK</p>
+            <div class="discount">
+              <p>Now: <span>1250 DKK</span></p>
+            </div>
+          </article>
+        </template> */
 }
 
 function showProduct(product) {
@@ -39,6 +43,14 @@ function showProduct(product) {
   ).textContent = `${product.articletype} | ${product.gender}`;
 
   copy.querySelector("h3").textContent = product.productdisplayname;
+
+  copy.querySelector(
+    "img"
+  ).src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
+
+  copy.querySelector(".price").textContent = product.price + " DKK";
+  copy.querySelector(".discount p").textContent =
+    "Now: " + product.price * (1 - product.discount / 100) + " DKK";
 
   if (product.soldout == false) {
     copy.querySelector(".sold-out").remove();
