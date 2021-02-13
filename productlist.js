@@ -21,7 +21,7 @@ function handleProductList(data) {
     </a>
 
     <h3>Big Cat Backpack Black</h3>
-    <p>Backpacks I Unisex</p>
+    <p class="subtitle">Backpacks I Unisex</p>
     <p class="price">DKK 1299</p>
   </article>
 </template> */
@@ -37,6 +37,8 @@ function showProduct(product) {
   copy.querySelector(
     ".subtitle"
   ).textContent = `${product.articletype} | ${product.gender}`;
+
+  copy.querySelector("h3").textContent = product.productdisplayname;
   //grab parent
   const parent = document.querySelector("section");
   //append
