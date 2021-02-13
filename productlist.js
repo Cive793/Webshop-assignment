@@ -27,8 +27,18 @@ function handleProductList(data) {
 </template> */
 }
 
-function showProduct(product) {}
-//grab the template
-const template = document.querySelector("#productTemplate").textContent;
-//clone it
-const copy = template.cloneNode(true);
+function showProduct(product) {
+  console.log(product);
+  //grab the template
+  const template = document.querySelector("#productTemplate").content;
+  //clone it
+  const copy = template.cloneNode(true);
+  //change content
+  copy.querySelector(
+    ".subtitle"
+  ).textContent = `${product.articletype} | ${product.gender}`;
+  //grab parent
+  const parent = document.querySelector("section");
+  //append
+  parent.appendChild(copy);
+}
