@@ -1,4 +1,9 @@
-const url = "https://kea-alt-del.dk/t7/api/products";
+const urlParams = new URLSearchParams(window.location.search);
+//in the URL grab id and store it´s value in id
+const brandname = urlParams.get("brandname");
+console.log(brandname);
+document.querySelector("main>h2").textContent = brandname;
+const url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brandname;
 
 fetch(url)
   .then(function (res) {
@@ -9,22 +14,25 @@ fetch(url)
   });
 
 function handleProductList(data) {
-  console.log(data);
   data.forEach(showProduct);
 }
 
 {
   /* <template id="productTemplate">
-  <article class="product">
-    <a href="product.html">
-      <img src="assets/1526.webp" />
-    </a>
+          <article class="product">
+            <a href="product.html">
+              <p class="sold-out">Sold out</p>
+              <img src="assets/1526.webp" />
+            </a>
 
-    <h3>Big Cat Backpack Black</h3>
-    <p class="subtitle">Backpacks I Unisex</p>
-    <p class="price">DKK 1299</p>
-  </article>
-</template> */
+            <h3>Big Cat Backpack Black</h3>
+            <p class="subtitle">Backpacks | Unisex</p>
+            <p class="price"><span>Prev:</span> 1299 DKK</p>
+            <div class="discount">
+              <p>Now: <span>1250 DKK</span></p>
+            </div>
+          </article>
+        </template> */
 }
 
 function showProduct(product) {
@@ -39,6 +47,31 @@ function showProduct(product) {
   ).textContent = `${product.articletype} | ${product.gender}`;
 
   copy.querySelector("h3").textContent = product.productdisplayname;
+
+  copy.querySelector(
+    "img"
+  ).src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
+
+  copy.querySelector(".price").textContent = product.price + " DKK";
+  copy.querySelector(".discount p").textContent =
+    "Now: " +
+    Math.round(+product.price * (1 - product.discount / 100)) +
+    " DKK";
+
+  copy.querySelector("a").href = `product.html?id=${product.id}`;
+
+  if (product.soldout == false) {
+    copy.querySelector(".sold-out").remove();
+  }
+
+  if (product.discount) {
+    copy.querySelector("article").classList.add("on-sale");
+  }
+
+  if (product.soldout) {
+    copy.querySelector("img").classList.add("soldout-img");
+  }
+
   //grab parent
   const parent = document.querySelector("section");
   //append

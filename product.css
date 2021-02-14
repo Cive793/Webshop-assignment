@@ -49,6 +49,7 @@ img {
   display: inline-block;
   margin-right: 100px;
   margin-left: 30px;
+  align-self: center;
 }
 
 section {
@@ -58,12 +59,12 @@ section {
 h2 {
   margin-bottom: 60px;
   margin-top: auto;
-  font-size: 60px;
+  font-size: 50px;
   font-family: quicksand, sans-serif;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 30px;
   font-family: quicksand, sans-serif;
   margin-bottom: 0px;
 }
@@ -71,7 +72,7 @@ h3 {
 p {
   font-size: 20px;
   font-family: quicksand, sans-serif;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .button {
@@ -85,7 +86,7 @@ p {
   font-weight: bold;
   border-radius: 10px;
   padding-right: 30px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 footer a {
@@ -117,7 +118,7 @@ footer {
 
   header a {
     margin-right: 10px;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   header ul {
@@ -134,15 +135,19 @@ footer {
   h2 {
     margin-left: 30px;
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 35px;
+    font-weight: 600;
   }
 
   h3 {
     margin-left: 30px;
+    font-size: 28px;
+    font-weight: 600;
   }
 
   p {
     margin-left: 30px;
+    font-size: 18px;
   }
 
   main {
@@ -169,5 +174,6 @@ footer {
     width: 450px;
     height: auto;
     margin-right: 60px;
+    margin-bottom: 130px;
   }
 }

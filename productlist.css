@@ -70,10 +70,24 @@ p {
   margin-bottom: 5px;
 }
 
+.price span {
+  color: black;
+}
+
 .discount {
   color: red;
   font-weight: 600;
   margin-top: 0px;
+  display: none;
+}
+
+.discount p,
+.discount span {
+  color: red;
+}
+
+article.on-sale .discount {
+  display: inline;
 }
 
 .container {
@@ -82,14 +96,24 @@ p {
 }
 
 .sold-out {
-  position: absolute;
+  /* position: absolute;
   top: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 2rem;
   font-size: 30px;
-  color: black;
+  color: black; */
+
+  content: "Sold Out";
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+
+.soldout-img {
+  opacity: 0.4;
 }
 
 .price {
