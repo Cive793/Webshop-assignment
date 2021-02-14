@@ -1,8 +1,9 @@
-const url = "https://kea-alt-del.dk/t7/api/products";
-
-/* var discountTotal = "product.price" * (1 - "product.discount / 100)";
-
-var discountTotal = Math.round(2.5); */
+const urlParams = new URLSearchParams(window.location.search);
+//in the URL grab id and store it´s value in id
+const brandname = urlParams.get("brandname");
+console.log(brandname);
+document.querySelector("main>h2").textContent = brandname;
+const url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brandname;
 
 fetch(url)
   .then(function (res) {
@@ -13,7 +14,6 @@ fetch(url)
   });
 
 function handleProductList(data) {
-  console.log(data);
   data.forEach(showProduct);
 }
 
